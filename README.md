@@ -1,27 +1,68 @@
-# AngularEssential
+# Angular Essential Training
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+### Pre-reqs:
+1. Find All the cheat sheets: http://www.developer-cheatsheets.com/
+2. Java Script: https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet
+3. Type Script: https://devhints.io/typescript
+4. TS: https://rmolinamir.github.io/typescript-cheatsheet/
 
-## Development server
+This is the repository for my course **Angular Essential Training**  
+The full course is available at [LinkedIn Learning](https://www.linkedin.com/learning) and [lynda.com](https://lynda.com).  
+[LinkedIn Learning subscribers: watch here](https://www.linkedin.com/learning/angular-essential-training-2)  
+[Lynda.com subscribers: watch here](https://www.lynda.com/Angular-tutorials/Angular-Essential-Training/5034181-2.html)  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Course Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular was designed by Google to address challenges programmers face building complex, single-page applications. This JavaScript platform provides a solid core of web functionality, letting you take care of the design and implementation details. In this course, Justin Schwartzenberger introduces you to the essentials of this "superheroic" platform, including powerful features such as two-way data binding, comprehensive routing, and dependency injection. Justin steps through the platform one feature at a time, focusing on the component-based architecture of Angular. Learn what Angular is and what it can do, as Justin builds a full-featured web app from start to finish. After mastering the essentials, you can tackle the other project-based courses in our library and create your own Angular app.
 
-## Build
+Topics include:
+- What is Angular?
+- Working with components
+- Binding events and properties
+- Getting data to components
+- Using directives and pipes
+- Creating Angular forms
+- Validating form data
+- How Angular does dependency injection
+- Making HTTP calls
+- Routing
+- Styling components
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Instructions
 
-## Running unit tests
+1. Make sure you have these installed
+  - [node.js](http://nodejs.org/)
+  - [git](http://git-scm.com/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) 
 
-## Running end-to-end tests
+    `git clone https://github.com/KrishnakanthYachareni/angular-essential.git`
+    
+3. CD to the folder
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    `cd angular-essential-training`
 
-## Further help
+    and then fetch all of the remote branches for the repository
+    
+    `git fetch --all` 
+    
+4. Run the following to install the project dependencies:
+
+    `npm install`
+    
+5. Run the ng serve command to build the code, watch for file changes, and serve up the site locally:
+
+    `ng serve`
+
+6. Navigate to http://localhost:4200. The app will automatically reload if you change any of the source files.
+
+    `http://localhost:4200/`
+
+The repository has a branch for each video starting point. For example, the branch **02-01b** is used as the starting code for the video *02-01 NgModule and the root module*. You can checkout branches using `git checkout <branchname>` and not have to re-run `npm install` each time since you will remain in the same root folder.
+
+
+## Angular CLI
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
