@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'mw-app',
+  templateUrl: './app.component.html', // or template: '<h1> My app <h1>' can also be used for direct HTML template
+  styleUrls: ['./app.component.css'] // or styles['h1 { color: #fffff; }']
 })
 export class AppComponent {
-  title = 'angular-essential';
+  title = 'Movie Media';
 }
