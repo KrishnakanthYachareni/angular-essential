@@ -6,6 +6,18 @@
 3. Type Script: https://devhints.io/typescript
 4. TS: https://rmolinamir.github.io/typescript-cheatsheet/
 
+### Angular Basics
+1. `{{}}` is an angular interpolation, angular evaluates the expression inside and display as a string on browser.
+2. `{}` Java Script expression.
+3. `[]` Angular property binding (within tags eg: <div [textContent]='expression'>)
+   https://angular.io/guide/property-binding
+4. `()` Event binding in html template (<a (click) ="expression"/>)
+    **Note:** `(click)` is angular native event all the DOM/JS events are start with `on` like `onClick`.
+5.  `@Input` from angualr/core is used to get the data to component from view.
+    https://angular.io/guide/inputs-outputs
+6. `@Output`Decorator that marks a class field as an output property and supplies configuration metadata. 
+
+
 This is the repository for my course **Angular Essential Training**  
 The full course is available at [LinkedIn Learning](https://www.linkedin.com/learning) and [lynda.com](https://lynda.com).  
 [LinkedIn Learning subscribers: watch here](https://www.linkedin.com/learning/angular-essential-training-2)  

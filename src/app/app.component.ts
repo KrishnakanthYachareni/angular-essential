@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Movie Media';
+
+  firstMediaItem = {
+    id: 1,
+    name: 'Firebug',
+    medium: 'Series',
+    category: 'Science Fiction',
+    year: 2010,
+    watchedOn: 1294166565384,
+    isFavorite: false
+  };
+
+  onMediaItemDelete(mediaItem){
+
+  }
 }
