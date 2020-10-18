@@ -9,19 +9,20 @@
 ### Angular Basics
 1. `{{}}` is an angular interpolation, angular evaluates the expression inside and display as a string on browser.
 2. `{}` Java Script expression.
-3. `[]` Angular property binding (within tags eg: <div [textContent]='expression'>)
-   https://angular.io/guide/property-binding
+3. `[]` Angular property binding (within tags eg: <div [textContent]='expression'>) 
+     Ref: https://angular.io/guide/property-binding
 4. `()` Event binding in html template (<a (click) ="expression"/>)
     **Note:** `(click)` is angular native event all the DOM/JS events are start with `on` like `onClick`.
-5.  `@Input` from angualr/core is used to get the data to component from view.
-    https://angular.io/guide/inputs-outputs
+5.  `@Input` from angualr/core is used to get the data to component from view. 
+    Ref: https://angular.io/guide/inputs-outputs
 6. `@Output`Decorator that marks a class field as an output property and supplies configuration metadata. 
 7. Angular has 2 types of directives. These directives should use using `*` asteric symbol at the start. If Astric symbol eliminate the necessity if `<ng-template [ngIf]="expression">...HTML code </ng-template>`. If we don't use that symbol we should write structural durectives inside `<ng-template>`
     1. **Structural Directives:** 
         1. `ngIf` -> `*ngIf="mediaItem`
         2. `ngFor` -> `*ngFor="let mediaItem of mediaItems"` It uses the angular micro syntax to evaluates the expression/iteration of list.
 
-    https://angular.io/guide/structural-directives
+    Ref: https://angular.io/guide/structural-directives
+
     2. **Attribute Directives:** An Attribute directive changes the appearance or behavior of a DOM element.
         1. **Built-In:** `ngClass` Adds and removes CSS classes on an HTML element.
 ````html
@@ -35,9 +36,10 @@
             </mw-media-item>
        </section>
 ````
-        2. **Custom Attributes Dir:** Use `@Directive` (By using Ang CLI `ng g directive  path/directiveName)
-    https://angular.io/guide/attribute-directives
-8. **Angular Pipes:** A template expression operator that takes in a value and returns a new value representation. https://angular.io/api/core/Pipe
+   3. **Custom Attributes Dir:** Use `@Directive` (By using Ang CLI `ng g directive  path/directiveName) 
+    Ref: https://angular.io/guide/attribute-directives
+
+8. **Angular Pipes:** A template expression operator that takes in a value and returns a new value representation. Ref:https://angular.io/api/core/Pipe
 ````html
 <div>Watched on {{ mediaItem.watchedOn | date: 'shortDate'}}</div>
 
@@ -47,16 +49,12 @@
 ````
 To create the custom pipe using Ang Cli use `ng g pipe path/pipeName`
 
-### Course Details
+## Course Description
+
 This is the repository for my course **Angular Essential Training**  
 The full course is available at [LinkedIn Learning](https://www.linkedin.com/learning) and [lynda.com](https://lynda.com).  
 [LinkedIn Learning subscribers: watch here](https://www.linkedin.com/learning/angular-essential-training-2)  
 [Lynda.com subscribers: watch here](https://www.lynda.com/Angular-tutorials/Angular-Essential-Training/5034181-2.html)  
-
-
-## Course Description
-
-Angular was designed by Google to address challenges programmers face building complex, single-page applications. This JavaScript platform provides a solid core of web functionality, letting you take care of the design and implementation details. In this course, Justin Schwartzenberger introduces you to the essentials of this "superheroic" platform, including powerful features such as two-way data binding, comprehensive routing, and dependency injection. Justin steps through the platform one feature at a time, focusing on the component-based architecture of Angular. Learn what Angular is and what it can do, as Justin builds a full-featured web app from start to finish. After mastering the essentials, you can tackle the other project-based courses in our library and create your own Angular app.
 
 Topics include:
 - What is Angular?
