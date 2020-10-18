@@ -1,0 +1,12 @@
+<header>
+  <div>{{ mediaItems | category }}</div>
+</header>
+<section>
+    <!-- For iteration of ngFor it creates the new component of <mw-media-item> & insert on browser-->
+    <mw-media-item 
+    [ngClass]="{'medium-movies': mediaItem.medium==='Movies', 'medium-series':mediaItem.medium==='Series'}"
+      *ngFor="let mediaItem of mediaItems"
+      [mediaItem]="mediaItem"
+      (delete)="onMediaItemDelete($event)">
+    </mw-media-item>
+</section>

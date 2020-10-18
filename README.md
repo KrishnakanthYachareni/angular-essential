@@ -16,8 +16,38 @@
 5.  `@Input` from angualr/core is used to get the data to component from view.
     https://angular.io/guide/inputs-outputs
 6. `@Output`Decorator that marks a class field as an output property and supplies configuration metadata. 
+7. Angular has 2 types of directives. These directives should use using `*` asteric symbol at the start. If Astric symbol eliminate the necessity if `<ng-template [ngIf]="expression">...HTML code </ng-template>`. If we don't use that symbol we should write structural durectives inside `<ng-template>`
+    1. **Structural Directives:** 
+        1. `ngIf` -> `*ngIf="mediaItem`
+        2. `ngFor` -> `*ngFor="let mediaItem of mediaItems"` It uses the angular micro syntax to evaluates the expression/iteration of list.
 
+    https://angular.io/guide/structural-directives
+    2. **Attribute Directives:** An Attribute directive changes the appearance or behavior of a DOM element.
+        1. **Built-In:** `ngClass` Adds and removes CSS classes on an HTML element.
+        ````html
+        <section>
+          <!-- For iteration of ngFor it creates the new component of <mw-media-item> & insert on browser-->
+            <mw-media-item 
+              [ngClass]="{'medium-movies': mediaItem.medium==='Movies', 'medium-series':mediaItem.medium==='Series'}"
+              *ngFor="let mediaItem of mediaItems"
+              [mediaItem]="mediaItem"
+              (delete)="onMediaItemDelete($event)">
+            </mw-media-item>
+       </section>
+        ````
+        2. **Custom Attributes Dir:** Use `@Directive` (By using Ang CLI `ng g directive  path/directiveName)
+    https://angular.io/guide/attribute-directives
+8. **Angular Pipes:** A template expression operator that takes in a value and returns a new value representation. https://angular.io/api/core/Pipe
+````html
+<div>Watched on {{ mediaItem.watchedOn | date: 'shortDate'}}</div>
 
+(or)
+
+<h2>{{ mediaItem.name | slice: '0:10' | uppercase}}</h2>
+````
+To create the custom pipe using Ang Cli use `ng g pipe path/pipeName`
+
+### Course Details
 This is the repository for my course **Angular Essential Training**  
 The full course is available at [LinkedIn Learning](https://www.linkedin.com/learning) and [lynda.com](https://lynda.com).  
 [LinkedIn Learning subscribers: watch here](https://www.linkedin.com/learning/angular-essential-training-2)  
@@ -78,3 +108,5 @@ The repository has a branch for each video starting point. For example, the bran
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Component Generation: `ng g component path/componentName`
+2. Directive Genration: `ng g directive path/directiveName`
