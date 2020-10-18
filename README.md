@@ -111,8 +111,7 @@ export class MediaItemFormComponent implements OnInit {
 
 }
 ````
-
-    2. **Reactive/Model-Driven:** (Full powered) Form field contract, Field validation rules, Change tracking, can be unit tested without any UI layer.
+   2. **Reactive/Model-Driven:** (Full powered) Form field contract, Field validation rules, Change tracking, can be unit tested without any UI layer.
     It uses `FormGroup`, `FormControl`, `formControlName`.
 ````html
     <header>
@@ -180,11 +179,9 @@ export class MediaItemFormComponent implements OnInit {
   }
 }
 ````
-    3. **Angular Built-in Validators:** Use `Validators` in component on FormGroup.
-
-Ref: https://angular.io/guide/forms-overview
-
-
+  3. **Angular Built-in Validators:** Use `Validators` in component on FormGroup.
+  
+  Ref: https://angular.io/guide/forms-overview
 
 ## Course Description
 
