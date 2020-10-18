@@ -24,7 +24,7 @@
     https://angular.io/guide/structural-directives
     2. **Attribute Directives:** An Attribute directive changes the appearance or behavior of a DOM element.
         1. **Built-In:** `ngClass` Adds and removes CSS classes on an HTML element.
-        ````html
+````html
         <section>
           <!-- For iteration of ngFor it creates the new component of <mw-media-item> & insert on browser-->
             <mw-media-item 
@@ -34,7 +34,7 @@
               (delete)="onMediaItemDelete($event)">
             </mw-media-item>
        </section>
-        ````
+````
         2. **Custom Attributes Dir:** Use `@Directive` (By using Ang CLI `ng g directive  path/directiveName)
     https://angular.io/guide/attribute-directives
 8. **Angular Pipes:** A template expression operator that takes in a value and returns a new value representation. https://angular.io/api/core/Pipe
