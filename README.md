@@ -49,6 +49,143 @@
 ````
 To create the custom pipe using Ang Cli use `ng g pipe path/pipeName`
 
+9. **Angular Forms:** Angular provides two different approaches to handling user input through forms: *reactive/model-driven and template-driven*. Both capture user input events from the view, validate the user input, create a form model and data model to update, and provide a way to track changes.
+
+    1. **Template-Driven:** (Simple and Ease of Use) Uses `ngModel`, `ngForm`, `ngSubmit`
+````html
+media-item-form.component.html
+        <header>
+    <h2>Add Media to Watch</h2>
+</header>
+<form #mediaItemForm="ngForm" (ngSubmit)="onSubmit(mediaItemForm.value)">
+    <ul>
+        <li>
+            <label for="medium">Medium</label>
+            <select name="medium" id="medium" ngModel>
+                <option value="Movies">Movies</option>
+                <option value="Series">Series</option>
+            </select>
+        </li>
+        <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" ngModel>
+        </li>
+        <li>
+            <label for="category">Category</label>
+            <select name="category" id="category" ngModel>
+                <option value="Action">Action</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Horror">Horror</option>
+                <option value="Romance">Romance</option>
+            </select>
+        </li>
+        <li>
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year" maxlength="4" ngModel>
+        </li>
+    </ul>
+    <button type="submit">Save</button>
+</form>
+````
+     media-item-form.component.ts
+````ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'mw-media-item-form',
+  templateUrl: './media-item-form.component.html',
+  styleUrls: ['./media-item-form.component.css']
+})
+export class MediaItemFormComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(mediaItem) {
+    console.log(mediaItem);
+  }
+
+}
+````
+
+    2. **Reactive/Model-Driven:** (Full powered) Form field contract, Field validation rules, Change tracking, can be unit tested without any UI layer.
+    It uses `FormGroup`, `FormControl`, `formControlName`.
+````html
+    <header>
+    <h2>Add Media to Watch</h2>
+  </header>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)">
+    <ul>
+      <li>
+        <label for="medium">Medium</label>
+        <select name="medium" id="medium" formControlName="medium">
+          <option value="Movies">Movies</option>
+          <option value="Series">Series</option>
+        </select>
+      </li>
+      <li>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" formControlName="name">
+      </li>
+      <li>
+        <label for="category">Category</label>
+        <select name="category" id="category" formControlName="category">
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+          <option value="Romance">Romance</option>
+        </select>
+      </li>
+      <li>
+        <label for="year">Year</label>
+        <input type="text" name="year" id="year" maxlength="4" formControlName="year">
+      </li>
+    </ul>
+    <button type="submit">Save</button>
+  </form>
+````
+    component.ts
+````ts
+    import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+
+@Component({
+  selector: 'mw-media-item-form',
+  templateUrl: './media-item-form.component.html',
+  styleUrls: ['./media-item-form.component.css']
+})
+export class MediaItemFormComponent implements OnInit {
+  
+  form: FormGroup;
+
+  ngOnInit() {
+    this.form = new FormGroup({
+      medium: new FormControl('Movies'),
+      name: new FormControl(''),
+      category: new FormControl(''),
+      year: new FormControl(''),
+    });
+  }
+
+  onSubmit(mediaItem) {
+    console.log(mediaItem);
+  }
+}
+````
+    3. **Angular Built-in Validators:** Use `Validators` in component on FormGroup.
+
+Ref: https://angular.io/guide/forms-overview
+
+
+
 ## Course Description
 
 This is the repository for my course **Angular Essential Training**  
