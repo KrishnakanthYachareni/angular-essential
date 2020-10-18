@@ -184,8 +184,8 @@ export class MediaItemFormComponent implements OnInit {
   Ref: https://angular.io/guide/forms-overview
 
 10. **Dependecy Injection and Services:** Dependency injection (DI), is an important application design pattern. Angular has its own DI framework, which is typically used in the design of Angular applications to increase their efficiency and modularity.
-  1. Use typescript injection(type) through constructor injection.
-  2. Or use `@Inject` / `@Injectable` angular directive for DI.
+    1. Use typescript injection(type) through constructor injection.
+    2. Or use `@Inject` / `@Injectable` angular directive for DI.
 
 Services should be singleton. In the DOM tree service registration at one component would be available for  all of it's child components. If it is in boostrap(main.ts) it available in all the components.
 
