@@ -209,6 +209,8 @@ export class SomeService {
 
 12. **Angular Routing:** Ref: https://angular.io/guide/router
 
+13. **Styling Components:** Ref: https://angular.io/api/core/ViewEncapsulation
+
 ## Course Description
 
 This is the repository for my course **Angular Essential Training**  
