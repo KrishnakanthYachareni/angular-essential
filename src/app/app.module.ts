@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MediaItemFormComponent } from './components/media-item-form/media-item-form.component';
 import { MediaItemListComponent } from './components/media-item-list/media-item-list.component';
 import { MediaItemComponent } from './components/media-item/media-item.component';
 import { FavoriteDirective } from './directives/favorite.directive';
@@ -17,13 +15,11 @@ import { lookupLists, lookupListToken } from './providers';
     MediaItemComponent,
     MediaItemListComponent,
     FavoriteDirective,
-    CategoryPipe,
-    MediaItemFormComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [
     { provide: lookupListToken, useValue: lookupLists }
