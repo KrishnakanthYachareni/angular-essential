@@ -205,6 +205,9 @@ export class SomeService {
   }
 }
 ````
+11. **Angular Http:**  Ref: https://angular.io/guide/http
+
+12. **Angular Routing:** Ref: https://angular.io/guide/router
 
 ## Course Description
 
