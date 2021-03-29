@@ -1,5 +1,10 @@
 # Angular Essential Training
 
+### Angular Cheat-sheet
+1. https://angular.io/guide/cheatsheet
+2. https://malcoded.com/angular-cheat-sheet/
+2. https://github.com/delprzemo/angular-cheatsheet
+
 ### Pre-reqs:
 1. Find All the cheat sheets: http://www.developer-cheatsheets.com/
 2. Java Script: https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet
@@ -270,3 +275,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 1. Component Generation: `ng g component path/componentName`
 2. Directive Genration: `ng g directive path/directiveName`
+
+
+## Angular Security
+1. https://owasp.org/   --> OWSAP (Open WebApplication Security Protocol)
+2. Angular Bydefault avoid XSS attacks (Injecting script on the browser will be not trusted.) Use DomSanitizer for allowing specific trusted scripts into HTML.
+3. JWT -> Prevent CSRF attacks.
+4. Reference:h ttps://angular.io/guide/security
